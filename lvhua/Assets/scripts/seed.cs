@@ -35,18 +35,20 @@ public class seed : MonoBehaviour {
     float kuandu = 1;
     public float width;
     public GameObject planet;
-    public GameObject gamemanager;
+    public GameObject gamemanager1;
     public Vector3 xiangliang;
     public jiance jiance1;
     SpriteRenderer ren;
     
 	// Use this for initialization
 	void Start () {
+        planet = GameObject.Find("星球_1");
         ren = GetComponent<SpriteRenderer>();
         ren.sprite = seed_pr.seed_img;
         this.transform.localScale = seed_pr.daxiao_0;
         width = 1;
-        jiance1 = gamemanager.GetComponent<jiance>();
+        gamemanager1 = GameObject.Find("gamemanager");
+        jiance1 = gamemanager1.GetComponent<jiance>();
    
            
         
@@ -87,6 +89,7 @@ public class seed : MonoBehaviour {
         xiangliang = this.transform.position - planet.transform.position;
 
     }
+    
   
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -96,6 +99,8 @@ public class seed : MonoBehaviour {
            
             this.gameObject.transform.SetParent(other.gameObject.transform);
             jiance1.seeds.Add(this.gameObject);
+            
+           
             fall = false;
         }
     }
