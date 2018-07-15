@@ -109,7 +109,15 @@ MonoBehaviour:
     daxiao_2: {x: 0.3, y: 0.3, z: 0.3}
     width_tree1: 2
     width_tree2: 3
+  fall: 1
+  life_time: 0
   speed: 3
+  width: 0
+  planet: {fileID: 1600074544247104, guid: 13dad74fafc49c24089ae17cced9c415, type: 2}
+  gamemanager: {fileID: 1045714958369644, guid: 08f99c9367aba414ca1f8e305832d4f5,
+    type: 2}
+  xiangliang: {x: 0, y: 0, z: 0}
+  jiance1: {fileID: 0}
 --- !u!212 &212595213269913518
 SpriteRenderer:
   m_ObjectHideFlags: 1

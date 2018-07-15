@@ -18,6 +18,7 @@ public struct Seed___
 
     public float width_tree1;
     public float width_tree2;
+   
 }
 
 public class seed : MonoBehaviour {
@@ -33,6 +34,10 @@ public class seed : MonoBehaviour {
     public float speed;
     float kuandu = 1;
     public float width;
+    public GameObject planet;
+    public GameObject gamemanager;
+    public Vector3 xiangliang;
+    public jiance jiance1;
     SpriteRenderer ren;
     
 	// Use this for initialization
@@ -41,6 +46,10 @@ public class seed : MonoBehaviour {
         ren.sprite = seed_pr.seed_img;
         this.transform.localScale = seed_pr.daxiao_0;
         width = 1;
+        jiance1 = gamemanager.GetComponent<jiance>();
+   
+           
+        
     }
 	
 	// Update is called once per frame
@@ -75,6 +84,7 @@ public class seed : MonoBehaviour {
         {
             Destroy(this.gameObject);
         }
+        xiangliang = this.transform.position - planet.transform.position;
 
     }
   
@@ -85,6 +95,7 @@ public class seed : MonoBehaviour {
         {
            
             this.gameObject.transform.SetParent(other.gameObject.transform);
+            jiance1.seeds.Add(this.gameObject);
             fall = false;
         }
     }
