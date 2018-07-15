@@ -10,7 +10,8 @@ public class huagezi : MonoBehaviour {
         
         for (int i = 0; i < fenqu / 2; i++)
         {
-            Instantiate(xian, this.transform.position, Quaternion.Euler(new Vector3(0, 0, (360 / fenqu) * i)));
+            GameObject gameObject_ = Instantiate(xian, this.transform.position, Quaternion.Euler(new Vector3(0, 0, (360 / fenqu) * i))) as GameObject;
+            gameObject_.transform.SetParent(this.gameObject.transform);
         }
 
 	}
