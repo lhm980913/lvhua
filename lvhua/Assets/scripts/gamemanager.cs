@@ -15,11 +15,16 @@ public class gamemanager : MonoBehaviour {
     public Text text;
     public GameObject text2;
 
+    public GameObject sssssss;
+
     public Text text1;
     public GameObject gamemanager1;
     public jiance jiance1;
 
-    
+    public Sprite s1;
+    public Sprite s2;
+    public Sprite s3;
+
 
     // Use this for initialization
     void Start () {
@@ -44,16 +49,21 @@ public class gamemanager : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Q))
         {
             seed_zhong = seed1;
+            sssssss.GetComponent<SpriteRenderer>().sprite = s1;
         }
         if (Input.GetKeyDown(KeyCode.W))
         {
             seed_zhong = seed2;
+            sssssss.GetComponent<SpriteRenderer>().sprite = s2;
+
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
             seed_zhong = seed3;
+            sssssss.GetComponent<SpriteRenderer>().sprite = s3;
+
         }
-        if(Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene("main");
         }
